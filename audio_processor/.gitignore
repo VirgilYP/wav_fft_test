@@ -1,0 +1,52 @@
+# Ignore Cargo's artifacts and output directories
+/target/
+/debug/
+/release/
+
+# Ignore build scripts and configuration files
+**/*.rs.bk
+
+# Ignore the Rust toolchain file
+rust-toolchain
+
+# Ignore IDE and editor configuration files
+/.idea/
+/.vscode/
+/*.code-workspace
+
+# Ignore temporary files created by editors and operating systems
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignore compiled binary files
+*.exe
+*.out
+*.o
+*.d
+
+# Ignore dependency directories
+/node_modules/
+/pkg/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore coverage and test results
+/coverage/
+/test-results/
+
+# Ignore specific files for Rust
+Cargo.lock
+
+# Ignore Rustfmt configuration
+rustfmt.toml
+
+# Ignore Clippy configuration
+clippy.toml
+
+# Ignore documentation output
+/target/doc/
