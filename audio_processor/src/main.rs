@@ -17,12 +17,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             println!("Peak frequency: {}", result["peak_frequency"]);
             println!("Warning: {}", result["warning"]);
 
-            // 保存 base64 编码的图像
-            let spectrum_image_base64 = result["spectrum_image_base64"].as_str().unwrap();
-            let spectrum_image_data = base64::decode(spectrum_image_base64)?;
-            std::fs::write("spectrum_image.png", spectrum_image_data)?;
+            // 注释掉保存 base64 编码的图像部分
+            // let spectrum_image_base64 = result["spectrum_image_base64"].as_str().unwrap();
+            // let spectrum_image_data = base64::decode(spectrum_image_base64)?;
+            // std::fs::write("spectrum_image.png", spectrum_image_data)?;
 
-            println!("Image saved as spectrum_image.png");
+            // println!("Image saved as spectrum_image.png");
         },
         Err(e) => eprintln!("Error: {}", e),
     }

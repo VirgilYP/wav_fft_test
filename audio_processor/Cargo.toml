@@ -6,13 +6,12 @@ edition = "2018"
 [dependencies]
 audrey = "0.3"
 rustfft = "5.1"
-plotters = "0.3"
-base64 = "0.13"
+# plotters = "0.3" # 注释掉 plotters 的依赖
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-image = "0.23"
-show-image = "0.14"
-
+# image = "0.23" # 注释掉 image 的依赖
+# base64 = "0.13" # 注释掉 base64 的依赖
+jni = "0.19"
 
 [features]
 default = []
@@ -21,7 +20,7 @@ android = []
 [lib]
 name = "audio_analysis_tool"
 path = "src/lib.rs"
-
+crate-type = ["cdylib","rlib"]  # 为了生成动态库
 [[bin]]
 name = "audio_analysis_tool_bin"
 path = "src/main.rs"
